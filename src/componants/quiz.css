@@ -1,10 +1,14 @@
 .container {
-    width: 500px;
-    height: 300px;
+    width: 640px;
     background-image: url(conImage.png);
     background-size: cover;
     border-radius: 8px;
-
+    margin: auto; 
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 50px;
 }
 
 .container h1 {
@@ -17,8 +21,9 @@
     border: none;
 }
 
-.container h3 {
-    margin-left: 20px;
+.container h2 {
+    font-size: 27px;
+    font-weight: 500;
 }
 
 ul {
@@ -27,39 +32,80 @@ ul {
 }
 
 ul li {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding-left: 10px;
+    border: 1.5px solid rgb(49, 37, 7);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 20px;
     cursor: pointer;
-    list-style: none;
-    height: 25px;
-    width: 450px;
-    margin: 10px 0px;
-    padding: 0px 5px;
-    font-size: 18px;
-    font-weight: 300;
-    border: 2px solid rgb(37, 33, 33);
-    border-radius: 3px;
 }
 
 .container button {
-    margin: 5px 230px;
-    width: 80px;
-    height: 30px;
+    margin: auto;
+    width: 250px;
+    height: 65px;
     background-color: blue;
     color: white;
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 25px;
+    font-weight: 500;
     border: none;
-    border-radius: 2px;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .container p {
-    margin-top: 10px;
-    margin-left: 230px;
+  margin: auto;
+  font-size: 18px;
 }
-.correct{
+
+.correct {
     background-color: rgb(118, 243, 185);
     border: 1px solid rgb(75, 238, 75);
 }
-.wrong{
+
+.wrong {
     background-color: rgb(243, 92, 92);
     border: 1px solid rgb(216, 24, 24);
 }
+
+h3{
+    margin: auto;
+}
+
+@media(max-width:600px){
+    .container{
+        margin: auto;
+        width: 80%;
+        font-size: medium;
+    }
+    .container h2 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    ul {
+        cursor: pointer;
+        margin-left: 10px;
+    }
+    ul li{
+        display: flex;
+        align-items: center;
+        height: 25px;
+        padding-left: 10px;
+    }
+    .container button {
+        margin: auto;
+        width: 200px;
+        height: 40px;
+        font-size: 25px;
+        font-weight: 500;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    
+}
+
+

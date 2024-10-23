@@ -52,10 +52,6 @@ function Quiz() {
         setLock(false);
         setScore(0);
         setResult(false);
-        optArray.forEach(option => {
-            option.current.classList.remove("wrong");
-            option.current.classList.remove("correct");
-        });
     };
 
     return (
@@ -64,15 +60,15 @@ function Quiz() {
             <hr />
             {result ? (
                 <>
-                    <h2>You Scored {score} out of {data.length}</h2>
+                    <h3>You Scored {score} out of {data.length}</h3>
                     <button onClick={resetQuiz}>Reset</button>
                 </>
             ) : (
                 <>
-                    <h3>{index + 1}. {question.question}</h3>
+                    <h2>{index + 1}. {question.question}</h2>
                     <ul>
-                        <li ref={option1} onClick={(e) => checkAns(e, 2)}>{question.option2}</li>
-                        <li ref={option2} onClick={(e) => checkAns(e, 1)}>{question.option1}</li>
+                        <li ref={option1} onClick={(e) => checkAns(e, 1)}>{question.option2}</li>
+                        <li ref={option2} onClick={(e) => checkAns(e, 2)}>{question.option1}</li>
                         <li ref={option3} onClick={(e) => checkAns(e, 3)}>{question.option3}</li>
                         <li ref={option4} onClick={(e) => checkAns(e, 4)}>{question.option4}</li>
                     </ul>

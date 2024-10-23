@@ -4,7 +4,6 @@
 }
 
 body {
-    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -12,3 +11,4 @@ body {
     background-image: url(./componants/bodyImage.png);
     background-size: cover;
 }
+
